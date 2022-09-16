@@ -34,6 +34,7 @@ botaoSorteia.addEventListener("click", () => {
     botaoIniciaJogo.style.display = "initial";
     cartasAleatorias = sorteiaParDeCartas();
     escolheCarta(cartasAleatorias[0], jogadorPrincipal);
+    zeraCartaDoJogador(jogadorMaquina);
 });
 
 botaoIniciaJogo.addEventListener("click", () => {
@@ -89,4 +90,10 @@ function geraCarta(carta, jogador, geraInputs) {
     if(geraInputs) {
         jogadorAtributos.children[0].children[0].checked = true;
     }
+}
+
+function zeraCartaDoJogador(jogador) {
+    jogador.children[0].innerHTML = "...";
+    jogador.children[1].src = "";
+    jogador.children[2].innerHTML = "";
 }

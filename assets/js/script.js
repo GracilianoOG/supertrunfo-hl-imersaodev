@@ -1,4 +1,5 @@
-const botaoSorteia = document.querySelector(".sorteio");
+const botaoSorteia = document.querySelector("#sorteio");
+const botaoIniciaJogo = document.querySelector("#jogo");
 const jogadorPrincipal = document.querySelector("#jogador");
 const jogadorMaquina = document.querySelector("#maquina");
 
@@ -29,7 +30,14 @@ console.log(listaCartas);
 
 botaoSorteia.addEventListener("click", () => {
     botaoSorteia.disabled = true;
+    botaoIniciaJogo.style.display = "initial";
     escolheCarta(sorteiaCarta(), jogadorPrincipal);
+});
+
+botaoIniciaJogo.addEventListener("click", () => {
+    botaoSorteia.disabled = false;
+    botaoIniciaJogo.style.display = "none";
+    escolheCarta(sorteiaCarta(), jogadorMaquina, false);
 });
 
 function sorteiaCarta() {

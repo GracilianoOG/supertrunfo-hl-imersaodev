@@ -16,6 +16,7 @@
 .cartas {
     display: flex;
     gap: 2rem;
+    position: relative;
 }
 
 .carta {
@@ -85,7 +86,7 @@
     width: 80%;
 }
 
-.sorteio {
+.botao {
     border: 2px solid rgb(255, 136, 0);
     border-radius: 50%;
     border-left-color: rgb(150, 80, 1);
@@ -96,4 +97,15 @@
     margin: auto 0;
     padding: 1rem;
     width: 6rem;
+}
+
+#jogo {
+    bottom: 0;
+    display: none;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
 }

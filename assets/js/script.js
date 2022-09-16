@@ -2,6 +2,7 @@ const botaoSorteia = document.querySelector("#sorteio");
 const botaoIniciaJogo = document.querySelector("#jogo");
 const jogadorPrincipal = document.querySelector("#jogador");
 const jogadorMaquina = document.querySelector("#maquina");
+let cartasAleatorias;
 
 const listaCartas = [
     {
@@ -31,17 +32,29 @@ console.log(listaCartas);
 botaoSorteia.addEventListener("click", () => {
     botaoSorteia.disabled = true;
     botaoIniciaJogo.style.display = "initial";
-    escolheCarta(sorteiaCarta(), jogadorPrincipal);
+    cartasAleatorias = sorteiaParDeCartas();
+    escolheCarta(cartasAleatorias[0], jogadorPrincipal);
 });
 
 botaoIniciaJogo.addEventListener("click", () => {
     botaoSorteia.disabled = false;
     botaoIniciaJogo.style.display = "none";
-    escolheCarta(sorteiaCarta(), jogadorMaquina, false);
+    escolheCarta(cartasAleatorias[1], jogadorMaquina, false);
 });
 
 function sorteiaCarta() {
-    return listaCartas[ Math.floor(Math.random() * listaCartas.length) ];
+    return Math.floor(Math.random() * listaCartas.length);
+}
+
+function sorteiaParDeCartas() {
+    let carta1 = sorteiaCarta();
+    let carta2 = sorteiaCarta();
+
+    while(carta1 == carta2) {
+        carta2 = sorteiaCarta();
+    }
+
+    return [listaCartas[carta1], listaCartas[carta2]];
 }
 
 function escolheCarta(carta, jogador, geraInputs = true) {

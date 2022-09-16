@@ -3,3 +3,97 @@
     margin: 0;
     padding: 0;
 }
+
+.wrapper {
+    align-items: center;
+    background-color: rgb(27, 27, 27);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+.cartas {
+    display: flex;
+    gap: 2rem;
+}
+
+.carta {
+    align-items: center;
+    background-image: url("../images/carta-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 136, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 300px;
+    margin: 0 auto;
+    transition: transform 300ms;
+    width: 200px;
+}
+
+.carta:hover {
+    transform: scale(1.1);
+}
+
+.carta__titulo {
+    background-image: linear-gradient(to top, rgb(150, 80, 1), rgb(255, 136, 0));
+    color: white;
+    font-size: 1rem;
+    height: 10%;
+    text-align: center;
+    width: 100%;
+}
+
+.carta__imagem {
+    background-color: rgb(27, 27, 27);
+    border: 2px solid rgb(255, 136, 0);
+    height: 50%;
+    object-fit: cover;
+    width: 90%;
+}
+
+.carta__atributos {
+    background-color: rgb(27, 27, 27);
+    border: 2px solid rgb(255, 136, 0);
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    justify-content: space-around;
+    padding: 0 .25rem;
+    width: 90%;
+}
+
+.atributo__label {
+    text-transform: capitalize;
+}
+
+.atributo__valor {
+    color: rgb(255, 136, 0);
+}
+
+.carta__rodape {
+    color: rgb(206, 206, 206);
+    font-size: .75rem;
+    padding-bottom: .25rem;
+    text-align: right;
+    width: 80%;
+}
+
+.sorteio {
+    border: 2px solid rgb(255, 136, 0);
+    border-radius: 50%;
+    border-left-color: rgb(150, 80, 1);
+    border-top-color: rgb(150, 80, 1);
+    cursor: pointer;
+    font-size: 1rem;
+    height: 6rem;
+    margin: auto 0;
+    padding: 1rem;
+    width: 6rem;
+}

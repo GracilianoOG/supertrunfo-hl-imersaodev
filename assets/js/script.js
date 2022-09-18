@@ -115,6 +115,7 @@ function comparaAtributos() {
             } else {
                 console.log("Empate!");
             }
+            return;
         }
     }
 }

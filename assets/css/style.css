@@ -6,7 +6,7 @@
 
 .wrapper {
     align-items: center;
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(20, 20, 20);
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -50,7 +50,7 @@
 }
 
 .carta__imagem {
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(30, 30, 30);
     border: 2px solid rgb(255, 136, 0);
     height: 50%;
     object-fit: cover;
@@ -58,7 +58,7 @@
 }
 
 .carta__atributos {
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(30, 30, 30);
     border: 2px solid rgb(255, 136, 0);
     border-radius: 5px;
     color: white;

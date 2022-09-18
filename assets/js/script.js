@@ -2,6 +2,7 @@ const botaoSorteia = document.querySelector("#sorteio");
 const botaoIniciaJogo = document.querySelector("#jogo");
 const jogadorPrincipal = document.querySelector("#jogador");
 const jogadorMaquina = document.querySelector("#maquina");
+const placar = document.querySelector(".placar__resultado");
 let cartasAleatorias;
 
 const listaCartas = [
@@ -27,14 +28,13 @@ const listaCartas = [
     }
 ];
 
-console.log(listaCartas);
-
 botaoSorteia.addEventListener("click", () => {
     botaoSorteia.disabled = true;
     botaoIniciaJogo.style.display = "initial";
     cartasAleatorias = sorteiaParDeCartas();
     escolheCarta(cartasAleatorias[0], jogadorPrincipal);
     zeraCartaDoJogador(jogadorMaquina);
+    placar.style.visibility = "hidden";
 });
 
 botaoIniciaJogo.addEventListener("click", () => {
@@ -100,21 +100,21 @@ function zeraCartaDoJogador(jogador) {
 }
 
 function comparaAtributos() {
-    const carta = jogadorPrincipal;
-    const atributos = carta.querySelectorAll(".atributo__input");
-
+    const atributos = jogadorPrincipal.querySelectorAll(".atributo__input");
+    
     for(let atributo of atributos) {
         if(atributo.checked) {
             const jogadorAtributo = cartasAleatorias[0].atributos[atributo.id];
             const maquinaAtributo = cartasAleatorias[1].atributos[atributo.id];
 
             if(jogadorAtributo > maquinaAtributo) {
-                console.log("Jogador ganhou!");
+                placar.innerHTML = "Jogador venceu!";
             } else if(maquinaAtributo > jogadorAtributo) {
-                console.log("Máquina ganhou!");
+                placar.innerHTML = "Jogador perdeu!";
             } else {
-                console.log("Empate!");
+                placar.innerHTML = "Jogo empatado!";
             }
+            placar.style.visibility = "visible";
             return;
         }
     }

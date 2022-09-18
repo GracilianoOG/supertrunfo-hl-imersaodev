@@ -41,6 +41,7 @@ botaoIniciaJogo.addEventListener("click", () => {
     botaoSorteia.disabled = false;
     botaoIniciaJogo.style.display = "none";
     escolheCarta(cartasAleatorias[1], jogadorMaquina, false);
+    comparaAtributos();
 });
 
 function sorteiaCarta() {
@@ -96,4 +97,24 @@ function zeraCartaDoJogador(jogador) {
     jogador.children[0].innerHTML = "...";
     jogador.children[1].src = "";
     jogador.children[2].innerHTML = "";
+}
+
+function comparaAtributos() {
+    const carta = jogadorPrincipal;
+    const atributos = carta.querySelectorAll(".atributo__input");
+
+    for(let atributo of atributos) {
+        if(atributo.checked) {
+            const jogadorAtributo = cartasAleatorias[0].atributos[atributo.id];
+            const maquinaAtributo = cartasAleatorias[1].atributos[atributo.id];
+
+            if(jogadorAtributo > maquinaAtributo) {
+                console.log("Jogador ganhou!");
+            } else if(maquinaAtributo > jogadorAtributo) {
+                console.log("Máquina ganhou!");
+            } else {
+                console.log("Empate!");
+            }
+        }
+    }
 }

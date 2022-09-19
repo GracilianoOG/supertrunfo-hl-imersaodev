@@ -8,22 +8,72 @@ let cartasAleatorias;
 const listaCartas = [
     {
         nome: "Adrian Shephard",
-        imagem: "",
+        imagem: "https://steamuserimages-a.akamaihd.net/ugc/918046427871732717/0B8D7FD64C9486F4DC58BE296DA0E7AFEA43DFA9/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
         atributos: {
-            attack: 8,
-            defense: 7,
-            science: 3,
-            stealth: 5
+            ataque: 7,
+            defesa: 6,
+            conhecimento: 3,
+            furtividade: 5
         },
     },
     {
         nome: "Gordon Freeman",
-        imagem: "",
+        imagem: "https://wallup.net/wp-content/uploads/2019/09/2823-half-life-2-gordon-freeman.jpg",
         atributos: {
-            attack: 6,
-            defense: 7,
-            science: 8,
-            stealth: 3
+            ataque: 6,
+            defesa: 7,
+            conhecimento: 8,
+            furtividade: 3
+        }
+    },
+    {
+        nome: "Barney Calhoun",
+        imagem: "https://steamuserimages-a.akamaihd.net/ugc/281856448673383569/390C1F8D24DE209339E6908A59DC0C064F2F2058/?imw=1024&imh=576&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
+        atributos: {
+            ataque: 5,
+            defesa: 4,
+            conhecimento: 5,
+            furtividade: 6
+        }
+    },
+    {
+        nome: "Gargantua",
+        imagem: "https://images.gamebanana.com/img/ss/mods/60e74a3ccb722.jpg",
+        atributos: {
+            ataque: 10,
+            defesa: 9,
+            conhecimento: 2,
+            furtividade: 1
+        }
+    },
+    {
+        nome: "Zombie",
+        imagem: "https://media.moddb.com/images/mods/1/13/12792/zombie01.png",
+        atributos: {
+            ataque: 8,
+            defesa: 3,
+            conhecimento: 1,
+            furtividade: 2
+        }
+    },
+    {
+        nome: "Bullsquid",
+        imagem: "https://cdna.artstation.com/p/assets/covers/images/013/586/302/large/a-dawson-img-20181019-071726-228.jpg?1540287677",
+        atributos: {
+            ataque: 8,
+            defesa: 5,
+            conhecimento: 1,
+            furtividade: 1
+        }
+    },
+    {
+        nome: "Scientist",
+        imagem: "https://i.ytimg.com/vi/zVYJ9o6Bddo/maxresdefault.jpg",
+        atributos: {
+            ataque: 2,
+            defesa: 3,
+            conhecimento: 10,
+            furtividade: 4
         }
     }
 ];
